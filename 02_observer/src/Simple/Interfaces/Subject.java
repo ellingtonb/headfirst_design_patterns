@@ -1,4 +1,4 @@
-package Interfaces;
+package Simple.Interfaces;
 
 public interface Subject {
     public void registerObserver(Observer o);

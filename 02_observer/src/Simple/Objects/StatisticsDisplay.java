@@ -1,8 +1,8 @@
-package Objects;
+package Simple.Objects;
 
-import Interfaces.DisplayElement;
-import Interfaces.Observer;
-import Interfaces.Subject;
+import Simple.Interfaces.DisplayElement;
+import Simple.Interfaces.Observer;
+import Simple.Interfaces.Subject;
 
 public class StatisticsDisplay implements Observer, DisplayElement {
     private float maxTemp = 0.0f;

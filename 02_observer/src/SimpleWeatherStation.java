@@ -1,6 +1,6 @@
-import Objects.*;
+import Simple.Objects.*;
 
-public class WeatherStation {
+public class SimpleWeatherStation {
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();
 
@@ -9,7 +9,9 @@ public class WeatherStation {
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
         HeatIndexDisplay heatIndexDisplay = new HeatIndexDisplay(weatherData);
 
-        System.out.println("\nPrimeira Atualização:");
+        System.out.println("\nObserver SIMPLES");
+        System.out.println("---------------------");
+        System.out.println("Primeira Atualização:");
         weatherData.setMeasurements(80, 65, 30.4f);
         System.out.println("\nSegunda Atualização:");
         weatherData.setMeasurements(82, 70, 29.2f);

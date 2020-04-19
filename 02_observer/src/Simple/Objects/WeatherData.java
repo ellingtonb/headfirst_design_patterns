@@ -1,7 +1,7 @@
-package Objects;
+package Simple.Objects;
 
-import Interfaces.Observer;
-import Interfaces.Subject;
+import Simple.Interfaces.Observer;
+import Simple.Interfaces.Subject;
 
 import java.util.ArrayList;
 
