@@ -5,8 +5,8 @@ import Interfaces.Observer;
 import Interfaces.Subject;
 
 public class ForecastDisplay implements Observer, DisplayElement {
-    private float temperature;
-    private float humidity;
+    private float currentPressure = 29.92f;
+    private float lastPressure;
     private Subject weatherData;
 
     public ForecastDisplay(Subject weatherData) {
@@ -16,14 +16,20 @@ public class ForecastDisplay implements Observer, DisplayElement {
 
     @Override
     public void display() {
-        System.out.println("Condições de Previsão: " + this.temperature +
-                "F degrees and " + this.humidity + "% humidity.");
+        System.out.print("Previsão: ");
+        if (currentPressure > lastPressure) {
+            System.out.println("O Clima está melhorando.");
+        } else if (currentPressure == lastPressure) {
+            System.out.println("O Clima continua o mesmo.");
+        } else if (currentPressure < lastPressure) {
+            System.out.println("Clima frio e chuvoso.");
+        }
     }
 
     @Override
     public void update(float temperature, float humidity, float pressure) {
-        this.temperature = temperature;
-        this.humidity = humidity;
+        this.lastPressure = currentPressure;
+        this.currentPressure = pressure;
         display();
     }
 }
