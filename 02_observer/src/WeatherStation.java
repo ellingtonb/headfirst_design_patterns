@@ -1,7 +1,4 @@
-import Objects.CurrentConditionsDisplay;
-import Objects.ForecastDisplay;
-import Objects.StatisticsDisplay;
-import Objects.WeatherData;
+import Objects.*;
 
 public class WeatherStation {
     public static void main(String[] args) {
@@ -10,6 +7,7 @@ public class WeatherStation {
         CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
         StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
+        HeatIndexDisplay heatIndexDisplay = new HeatIndexDisplay(weatherData);
 
         System.out.println("\nPrimeira Atualização:");
         weatherData.setMeasurements(80, 65, 30.4f);
