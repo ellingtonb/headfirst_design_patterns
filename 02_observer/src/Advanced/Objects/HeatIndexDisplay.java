@@ -4,11 +4,16 @@ import Advanced.Interfaces.DisplayElement;
 import Advanced.Interfaces.Observer;
 import Advanced.Interfaces.Subject;
 
-public class HeatIndexDisplay implements Observer, DisplayElement {
+public class HeatIndexDisplay extends AbstractObserver implements Observer, DisplayElement {
     float heatIndex = 0.0f;
 
     public HeatIndexDisplay(Subject subject) {
-        subject.registerObserver(this);
+        super(subject);
+    }
+
+    @Override
+    public String getName() {
+        return "HeatIndexDisplay";
     }
 
     @Override

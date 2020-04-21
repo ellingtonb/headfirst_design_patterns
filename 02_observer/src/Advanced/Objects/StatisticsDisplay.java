@@ -4,14 +4,19 @@ import Advanced.Interfaces.DisplayElement;
 import Advanced.Interfaces.Observer;
 import Advanced.Interfaces.Subject;
 
-public class StatisticsDisplay implements Observer, DisplayElement {
+public class StatisticsDisplay extends AbstractObserver implements Observer, DisplayElement {
     private float maxTemp = 0.0f;
     private float minTemp = 200;
     private float tempSum= 0.0f;
     private int numReadings;
 
     public StatisticsDisplay(Subject subject) {
-        subject.registerObserver(this);
+        super(subject);
+    }
+
+    @Override
+    public String getName() {
+        return "StatisticsDisplay";
     }
 
     @Override

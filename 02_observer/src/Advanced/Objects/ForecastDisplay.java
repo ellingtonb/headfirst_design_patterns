@@ -4,12 +4,17 @@ import Advanced.Interfaces.DisplayElement;
 import Advanced.Interfaces.Observer;
 import Advanced.Interfaces.Subject;
 
-public class ForecastDisplay implements Observer, DisplayElement {
+public class ForecastDisplay extends AbstractObserver implements Observer, DisplayElement {
     private float currentPressure = 29.92f;
     private float lastPressure;
 
-    public ForecastDisplay(Subject weatherData) {
-        weatherData.registerObserver(this);
+    public ForecastDisplay(Subject subject) {
+        super(subject);
+    }
+
+    @Override
+    public String getName() {
+        return "ForecastDisplay";
     }
 
     @Override
