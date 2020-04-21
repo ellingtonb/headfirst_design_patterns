@@ -4,12 +4,17 @@ import Advanced.Interfaces.DisplayElement;
 import Advanced.Interfaces.Observer;
 import Advanced.Interfaces.Subject;
 
-public class CurrentConditionsDisplay implements Observer, DisplayElement {
+public class CurrentConditionsDisplay extends AbstractObserver implements Observer, DisplayElement {
     private float temperature;
     private float humidity;
 
     public CurrentConditionsDisplay(Subject subject) {
-        subject.registerObserver(this);
+        super(subject);
+    }
+
+    @Override
+    public String getName() {
+        return "CurrentConditionsDisplay";
     }
 
     @Override

@@ -10,6 +10,9 @@ public class WeatherData implements Subject {
     private float temperature;
     private float humidity;
     private float pressure;
+    private float lastTemperatureNotified;
+    private float lastHumidityNotified;
+    private float lastPressureNotified;
     private boolean changed = false;
 
     public WeatherData() {
@@ -18,7 +21,11 @@ public class WeatherData implements Subject {
 
     @Override
     public void registerObserver(Observer o) {
-        this.observers.add(o);
+        if (!observers.contains(o)) {
+            this.observers.add(o);
+            return;
+        }
+        System.out.println("---> ATENÇÃO! Observer '" + o.getName() + "' JÁ Registrado!");
     }
 
     @Override
@@ -26,7 +33,9 @@ public class WeatherData implements Subject {
         int index = observers.indexOf(o);
         if (index >= 0) {
             this.observers.remove(index);
+            return;
         }
+        System.out.println("---> ATENÇÃO! Observer '" + o.getName() + "' NÃO Encontra-se Registrado!");
     }
 
     @Override
@@ -45,15 +54,37 @@ public class WeatherData implements Subject {
     }
 
     public void measurementsChanged() {
+
         setChanged();
+
         notifyObserver();
     }
 
     public void setMeasurements(float temperature, float humidity, float pressure) {
+        boolean tempNotify = temperature >= this.lastTemperatureNotified + 10 ||
+                temperature <= this.lastTemperatureNotified - 10;
+
+        boolean humNotify = humidity >= this.lastHumidityNotified + 10 ||
+                humidity <= this.lastHumidityNotified - 10;
+
+        boolean pressNotify = pressure >= this.lastPressureNotified + 10 ||
+                pressure <= this.lastPressureNotified - 10;;
+
+        boolean shouldNotify = tempNotify || humNotify || pressNotify;
+
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
-        measurementsChanged();
+
+        if (shouldNotify) {
+            this.lastTemperatureNotified = temperature;
+            this.lastHumidityNotified = humidity;
+            this.lastPressureNotified = pressure;
+            measurementsChanged();
+            return;
+        }
+
+        System.out.println("---> Nenhuma Informação Precisa ser Atualizada!");
     }
 
     public float getTemperature() {

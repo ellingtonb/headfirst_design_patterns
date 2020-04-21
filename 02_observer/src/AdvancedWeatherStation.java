@@ -16,6 +16,15 @@ public class AdvancedWeatherStation {
         System.out.println("\nSegunda Atualização:");
         weatherData.setMeasurements(82, 70, 29.2f);
         System.out.println("\nTerceira Atualização:");
+        forecastDisplay.stopObserver();
+        heatIndexDisplay.stopObserver();
         weatherData.setMeasurements(78, 90, 29.2f);
+        System.out.println("\nQuarta Atualização:");
+        forecastDisplay.startObserver();
+        forecastDisplay.startObserver();
+        heatIndexDisplay.startObserver();
+        currentDisplay.stopObserver();
+        statisticsDisplay.stopObserver();
+        weatherData.setMeasurements(89, 91, 26.2f);
     }
 }
