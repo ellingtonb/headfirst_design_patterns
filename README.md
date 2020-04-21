@@ -9,3 +9,4 @@ Repositório destinado ao exemplos de código utilizados no livro **Padrões de 
 ## Índice
 * **Strategy** (01_strategy)
 * **Observer** (02_observer)
+* **Decorator** (03_decorator)
