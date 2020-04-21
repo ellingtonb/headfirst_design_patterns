@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7484bf4-40db-4c85-a413-0d1ab7fed6d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/02_observer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,26 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RunManager" selected="Application.AdvancedObserver">
+    <configuration name="AdvancedObserver" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="AdvancedWeatherStation" />
+      <module name="02_observer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleObserver" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="SimpleWeatherStation" />
+      <module name="02_observer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.SimpleObserver" />
+      <item itemvalue="Application.AdvancedObserver" />
+    </list>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -35,5 +55,15 @@
       <updated>1587507190457</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="536" y="294" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587507338043">
+      <screen x="0" y="23" width="1920" height="1016" />
+    </state>
+    <state x="536" y="294" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1016/1920.23.1280.777@0.23.1920.1016" timestamp="1587507338043" />
+    <state x="809" y="429" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587507334519">
+      <screen x="0" y="23" width="1920" height="1016" />
+    </state>
+    <state x="809" y="429" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1920.1016/1920.23.1280.777@0.23.1920.1016" timestamp="1587507334519" />
   </component>
 </project>
