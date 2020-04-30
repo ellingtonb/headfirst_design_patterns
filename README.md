@@ -10,3 +10,4 @@ Repositório destinado ao exemplos de código utilizados no livro **Padrões de 
 * **Strategy** (01_strategy)
 * **Observer** (02_observer)
 * **Decorator** (03_decorator)
+* **Factory** (04_factory)
