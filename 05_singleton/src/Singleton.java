@@ -1,14 +1,11 @@
 public class Singleton {
-    private static Singleton uniqueInstance;
+    final private static Singleton uniqueInstance = new Singleton();
 
     private static int id;
 
     private Singleton() {}
 
     public static Singleton getInstance() {
-        if (uniqueInstance == null) {
-            uniqueInstance = new Singleton();
-        }
         return uniqueInstance;
     }
 
