@@ -14,3 +14,4 @@ Repositório destinado ao exemplos de código utilizados no livro **Padrões de 
 * **Decorator** (03_decorator)
 * **Factory** (04_factory)
 * **Singleton** (05_singleton)
+* **Command** (06_command)
