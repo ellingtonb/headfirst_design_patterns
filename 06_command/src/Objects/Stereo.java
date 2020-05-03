@@ -19,12 +19,24 @@ public class Stereo {
         System.out.println(location + " stereo is set for CD input");
     }
 
+    public void removeCD() {
+        System.out.println(location + " stereo removed the CD");
+    }
+
     public void setDVD() {
         System.out.println(location + " stereo is set for DVD input");
     }
 
+    public void removeDVD() {
+        System.out.println(location + " stereo removed the DVD");
+    }
+
     public void setRadio() {
         System.out.println(location + " stereo is set for Radio");
+    }
+
+    public void disableRadio() {
+        System.out.println(location + " stereo disabled Radio");
     }
 
     public void setVolume(int volume) {
