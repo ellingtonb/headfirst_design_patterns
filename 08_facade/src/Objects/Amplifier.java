@@ -1,51 +1,51 @@
 package Objects;
 
 public class Amplifier {
-	String description;
-	Tuner tuner;
-	DvdPlayer dvd;
-	CdPlayer cd;
+	protected String description;
+	protected Tuner tuner;
+	protected DvdPlayer dvd;
+	protected CdPlayer cd;
 	
 	public Amplifier(String description) {
 		this.description = description;
 	}
  
 	public void on() {
-		System.out.println(description + " on");
+		System.out.println(this.description + " on");
 	}
  
 	public void off() {
-		System.out.println(description + " off");
+		System.out.println(this.description + " off");
 	}
  
 	public void setStereoSound() {
-		System.out.println(description + " stereo mode on");
+		System.out.println(this.description + " stereo mode on");
 	}
  
 	public void setSurroundSound() {
-		System.out.println(description + " surround sound on (5 speakers, 1 subwoofer)");
+		System.out.println(this.description + " surround sound on (5 speakers, 1 subwoofer)");
 	}
  
 	public void setVolume(int level) {
-		System.out.println(description + " setting volume to " + level);
+		System.out.println(this.description + " setting volume to " + level);
 	}
 
 	public void setTuner(Tuner tuner) {
-		System.out.println(description + " setting tuner to " + dvd);
+		System.out.println(this.description + " setting tuner to " + dvd);
 		this.tuner = tuner;
 	}
   
 	public void setDvd(DvdPlayer dvd) {
-		System.out.println(description + " setting DVD player to " + dvd);
+		System.out.println(this.description + " setting DVD player to " + dvd);
 		this.dvd = dvd;
 	}
  
 	public void setCd(CdPlayer cd) {
-		System.out.println(description + " setting CD player to " + cd);
+		System.out.println(this.description + " setting CD player to " + cd);
 		this.cd = cd;
 	}
  
 	public String toString() {
-		return description;
+		return this.description;
 	}
 }

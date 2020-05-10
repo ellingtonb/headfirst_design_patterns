@@ -1,22 +1,21 @@
 package Objects;
 
 public class Screen {
-	String description;
+	protected String description;
 
 	public Screen(String description) {
 		this.description = description;
 	}
 
 	public void up() {
-		System.out.println(description + " going up");
+		System.out.println(this.description + " going up");
 	}
 
 	public void down() {
-		System.out.println(description + " going down");
+		System.out.println(this.description + " going down");
 	}
 
-
 	public String toString() {
-		return description;
+		return this.description;
 	}
 }

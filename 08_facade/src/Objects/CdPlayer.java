@@ -1,10 +1,10 @@
 package Objects;
 
 public class CdPlayer {
-	String description;
-	int currentTrack;
-	Amplifier amplifier;
-	String title;
+	protected String description;
+	protected int currentTrack;
+	protected Amplifier amplifier;
+	protected String title;
 	
 	public CdPlayer(String description, Amplifier amplifier) {
 		this.description = description;
@@ -12,44 +12,44 @@ public class CdPlayer {
 	}
  
 	public void on() {
-		System.out.println(description + " on");
+		System.out.println(this.description + " on");
 	}
  
 	public void off() {
-		System.out.println(description + " off");
+		System.out.println(this.description + " off");
 	}
 
 	public void eject() {
-		title = null;
-		System.out.println(description + " eject");
+		this.title = null;
+		System.out.println(this.description + " eject");
 	}
  
 	public void play(String title) {
 		this.title = title;
-		currentTrack = 0;
-		System.out.println(description + " playing \"" + title + "\"");
+		this.currentTrack = 0;
+		System.out.println(this.description + " playing \"" + title + "\"");
 	}
 
 	public void play(int track) {
-		if (title == null) {
-			System.out.println(description + " can't play track " + currentTrack + 
+		if (this.title == null) {
+			System.out.println(this.description + " can't play track " + this.currentTrack +
 					", no cd inserted");
 		} else {
-			currentTrack = track;
-			System.out.println(description + " playing track " + currentTrack);
+			this.currentTrack = track;
+			System.out.println(this.description + " playing track " + this.currentTrack);
 		}
 	}
 
 	public void stop() {
-		currentTrack = 0;
-		System.out.println(description + " stopped");
+		this.currentTrack = 0;
+		System.out.println(this.description + " stopped");
 	}
  
 	public void pause() {
-		System.out.println(description + " paused \"" + title + "\"");
+		System.out.println(this.description + " paused \"" + this.title + "\"");
 	}
  
 	public String toString() {
-		return description;
+		return this.description;
 	}
 }

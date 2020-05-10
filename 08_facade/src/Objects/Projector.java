@@ -1,8 +1,8 @@
 package Objects;
 
 public class Projector {
-	String description;
-	DvdPlayer dvdPlayer;
+	protected String description;
+	protected DvdPlayer dvdPlayer;
 	
 	public Projector(String description, DvdPlayer dvdPlayer) {
 		this.description = description;
@@ -10,22 +10,22 @@ public class Projector {
 	}
  
 	public void on() {
-		System.out.println(description + " on");
+		System.out.println(this.description + " on");
 	}
  
 	public void off() {
-		System.out.println(description + " off");
+		System.out.println(this.description + " off");
 	}
 
 	public void wideScreenMode() {
-		System.out.println(description + " in widescreen mode (16x9 aspect ratio)");
+		System.out.println(this.description + " in widescreen mode (16x9 aspect ratio)");
 	}
 
 	public void tvMode() {
-		System.out.println(description + " in tv mode (4x3 aspect ratio)");
+		System.out.println(this.description + " in tv mode (4x3 aspect ratio)");
 	}
   
-        public String toString() {
-                return description;
+	public String toString() {
+                return this.description;
         }
 }
