@@ -1,36 +1,36 @@
 package Objects;
 
 public class Tuner {
-	String description;
-	Amplifier amplifier;
-	double frequency;
+	protected String description;
+	protected Amplifier amplifier;
+	protected double frequency;
 
 	public Tuner(String description, Amplifier amplifier) {
 		this.description = description;
 	}
 
 	public void on() {
-		System.out.println(description + " on");
+		System.out.println(this.description + " on");
 	}
 
 	public void off() {
-		System.out.println(description + " off");
+		System.out.println(this.description + " off");
 	}
 
 	public void setFrequency(double frequency) {
-		System.out.println(description + " setting frequency to " + frequency);
+		System.out.println(this.description + " setting frequency to " + frequency);
 		this.frequency = frequency;
 	}
 
 	public void setAm() {
-		System.out.println(description + " setting AM mode");
+		System.out.println(this.description + " setting AM mode");
 	}
 
 	public void setFm() {
-		System.out.println(description + " setting FM mode");
+		System.out.println(this.description + " setting FM mode");
 	}
 
 	public String toString() {
-		return description;
+		return this.description;
 	}
 }

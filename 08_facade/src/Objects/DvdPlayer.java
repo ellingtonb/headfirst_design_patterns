@@ -1,10 +1,10 @@
 package Objects;
 
 public class DvdPlayer {
-	String description;
-	int currentTrack;
-	Amplifier amplifier;
-	String movie;
+	protected String description;
+	protected int currentTrack;
+	protected Amplifier amplifier;
+	protected String movie;
 	
 	public DvdPlayer(String description, Amplifier amplifier) {
 		this.description = description;

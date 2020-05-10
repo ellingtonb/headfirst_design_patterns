@@ -1,26 +1,25 @@
 package Objects;
 
 public class PopcornPopper {
-	String description;
+	protected String description;
 	
 	public PopcornPopper(String description) {
 		this.description = description;
 	}
  
 	public void on() {
-		System.out.println(description + " on");
+		System.out.println(this.description + " on");
 	}
  
 	public void off() {
-		System.out.println(description + " off");
+		System.out.println(this.description + " off");
 	}
 
 	public void pop() {
-		System.out.println(description + " popping popcorn!");
+		System.out.println(this.description + " popping popcorn!");
 	}
- 
-  
-        public String toString() {
-                return description;
+
+	public String toString() {
+                return this.description;
         }
 }
