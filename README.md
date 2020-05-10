@@ -15,3 +15,5 @@ Repositório destinado ao exemplos de código utilizados no livro **Padrões de 
 * **Factory** (04_factory)
 * **Singleton** (05_singleton)
 * **Command** (06_command)
+* **Adapter** (07_adapter)
+* **Facade** (08_facade)
